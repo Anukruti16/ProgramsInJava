@@ -1,0 +1,28 @@
+package Abc;
+interface operation{
+void division();
+void modulus();
+}
+
+class A implements operation{
+    int a=10,b=5;
+public void division(){
+int i=a/b;
+System.out.println(i);
+}
+public void modulus(){
+int j=a%b;
+System.out.println(j);
+}
+}
+
+public class Exp5dot4 {
+
+    public static void main(String[] args) {
+         A o=new A();
+         o.division();
+         o.modulus();
+        
+    }
+    
+}
