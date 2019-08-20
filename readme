@@ -1,0 +1,6 @@
+echo "# ProgramsInJava" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/Anukruti16/ProgramsInJava.git
+git push -u origin master
