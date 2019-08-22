@@ -1,0 +1,23 @@
+package exp5dot3;
+interface A{
+int a=10;
+
+}
+class B implements A{
+//int a=5; here it is possible as here it is instance variable
+void a()
+{   a=5;//cannot assign value to final variable
+    System.out.println(a);
+}
+}
+
+
+
+
+public class Exp5dot3 {
+    public static void main(String[] args) {
+        B o=new B();
+        o.a();
+    }
+    
+}
