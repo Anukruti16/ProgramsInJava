@@ -1,0 +1,19 @@
+interface A{
+public void meth1()
+    {
+        System.out.println("A");
+    }
+public void meth2()
+    {
+         System.out.println("B");
+    }
+
+}
+class MyClass implements A{
+public static void main(String args[]){
+MyClass o=new MyClass();
+o.meth1();
+o.meth2();
+}
+
+}
