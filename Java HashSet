@@ -1,0 +1,21 @@
+
+package collections2;
+import java.util.*;
+public class Collections3 {
+    public static void main(String[] args) 
+    {
+        HashSet<String> h=new HashSet();//creating HashSet
+        //adding elements to HashSet
+        h.add("cow");
+        h.add("goat");
+        h.add("dog");
+        h.add("cat");
+        System.out.println(h);
+        System.out.println(h.clone());//coping another HashSet object to another object
+        System.out.println( h.contains("cow"));//searching if the hashset contains "cow"
+        h.clear();//deleting all the elements at one go
+          System.out.println(h);
+          
+    }
+    
+}
