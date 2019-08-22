@@ -1,0 +1,139 @@
+package exp7;
+import java.util.Scanner;
+class One{
+void one1()
+{   try{
+    int a[];
+    a=new int[10];
+    String b[];
+    b=new String [10];
+    Scanner s=new Scanner(System.in);
+    System.out.println("enter roll number and name of 10 students");
+    for(int i=0;i<11;i++)//looping for 11 entries to demonstrate error which is then handled by catch block 
+    {
+        a[i]=s.nextInt();
+        b[i]=s.nextLine();
+    }
+    }
+catch(ArrayIndexOutOfBoundsException e)//specifying which error might occur
+        {
+            System.out.println("enter details of only 10 students");// error is caught
+        }
+System.out.println("Rest of the code");//since exception is handled, therefore rest of the code works properly
+}
+
+}
+
+
+class Divide{
+void divide1()
+{
+    try
+    {
+        int a=6,b=0,c;
+        c=a/b;//dividing by 0
+    }
+    catch(ArithmeticException e)// since divide by 0 is an arithmetic exception
+    {
+        System.out.println("An attempt  to divide by 0 was made");
+    }
+    System.out.println("Rest of the code");//exception was caught, rest of the code executes
+}
+}
+
+class Exception11{
+void exception1()
+{
+    try
+    {   
+       Scanner s=new Scanner(System.in);
+       System.out.println("enter two numbers");
+       int a=s.nextInt();
+       int b=s.nextInt();
+       int c=a%b;
+       System.out.println(c);
+       
+       
+    }
+    catch(Exception e)
+    {
+       System.out.println("enter compatible operands");
+    }
+    System.out.println("Rest of the code");
+}
+}
+
+class Vehicle{
+void vehicle()
+{
+    try
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the direction of vehicle 1"); 
+        String a=s.nextLine();
+         System.out.println("Enter the direction of vehicle 2");
+          String b=s.nextLine();
+          if(a.equals (b))//to check whether the directions are same
+              System.out.println("no chances of collision");
+          else
+              throw new Exception ("collision");
+    }
+    catch(Exception e)
+    {
+        System.out.println("collision detected");
+          System.out.println("re-enter similar directions of the vehicles ");//resolving exception
+           Scanner s=new Scanner(System.in);
+          System.out.println("Enter the direction of vehicle 1"); 
+        String a=s.nextLine();
+         System.out.println("Enter the direction of vehicle 2");
+          String b=s.nextLine();
+          if(a.equals (b))//to check whether now the directions are same
+              System.out.println("collision resolved");
+          
+    }
+}
+}
+
+class EmployeeDetails{
+void empdetails()
+{
+     try
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the name"); 
+        String name=s.nextLine();
+         System.out.println("Enter the age");
+         int b=s.nextInt();
+          if(!name.matches("a-z A-Z")&&b>50)//to check whether the name has alphabets only and age is less than 50
+              throw new Exception ("name should be string and age less than 50");//exception thrown
+          else
+          { System.out.println("Your name is "+ name+" and age is "+b);
+           System.out.println("object created");
+          }
+          
+    }
+    catch(Exception e)
+    {
+        System.out.println("enter valid information");
+    }
+}
+
+   
+} 
+
+public class Exp7 {
+    public static void main(String[] args) {
+       One o=new One();
+        o.one1();
+        Divide d=new Divide();
+        d.divide1();
+      Exception11 ex=new Exception11();
+       ex.exception1();
+       Vehicle v=new Vehicle();
+       v.vehicle();
+       EmployeeDetails em=new EmployeeDetails();
+       em.empdetails();
+      
+    }
+    
+}
