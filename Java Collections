@@ -1,0 +1,23 @@
+package collections;
+import java.util.*;
+
+public class Collections1 {
+    public static void main(String[] args)
+    {
+        ArrayList<String> al=new ArrayList<String>();//creating ArrayList
+        //adding objects to ArrayList
+        al.add("Apple");
+        al.add("Banana");
+        al.add("Apple");//duplicate object
+        al.add("Grapes");
+        
+        Iterator itr=al.iterator();//traversing arraylist using iterator
+        while(itr.hasNext())
+        {
+            System.out.println(itr.next());
+        }
+        Collections.reverse(al);//reversing elemnts of arraylist
+        System.out.println(al);
+    }
+    
+}
