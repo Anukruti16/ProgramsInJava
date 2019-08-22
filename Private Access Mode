@@ -1,0 +1,15 @@
+package exp4;
+
+class A{
+private void a()
+{
+    System.out.print("a");
+}
+}
+public class Exp4 extends A{
+    public static void main(String[] args) {
+       A obj=new A();
+       obj.a();// a is private, thus cannot be accessed in derived class 
+    }
+    
+}
