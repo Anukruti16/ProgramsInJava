@@ -1,0 +1,45 @@
+package exp9dot4;
+public class Exp9dot4 implements Runnable
+{
+    public void run()
+    {
+    }
+    public static void main(String args[]) throws InterruptedException
+    {
+        Thread T1=new Thread();//instantiating threads
+        Thread T2=new Thread();
+        Thread T3=new Thread();
+        Thread T4=new Thread();
+        Thread T5=new Thread();
+            T1.setPriority(10);//setting thread priority
+            T2.setPriority(4);
+            T3.setPriority(8);
+            T4.setPriority(2);
+            T5.setPriority(7);
+                T1.sleep(10000);
+                    if (T1.isAlive())//checking if thread is alive or not
+                        System.out.println("Thread 1 is alive");
+                    else
+                        System.out.println("Thread 1 is not alive");
+                T2.start(); 
+                    if (T2.isAlive())
+                        System.out.println("Thread 2 is alive");
+                    else
+                        System.out.println("Thread 2 is not alive");
+                T3.sleep(5000);
+                    if (T3.isAlive())
+                        System.out.println("Thread 3 is alive");
+                    else
+                        System.out.println("Thread 3 is not alive");
+                T4.start();
+                    if (T4.isAlive())
+                        System.out.println("Thread 4 is alive");
+                    else
+                        System.out.println("Thread 4 is not alive");
+                T5.start();
+                    if (T5.isAlive())
+                        System.out.println("Thread 5 is alive");
+                    else
+                        System.out.println("Thread 5 is not alive");
+    }
+}
