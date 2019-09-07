@@ -1,0 +1,50 @@
+package wrapperclass;
+
+class One{
+void one1()
+{
+    Integer i=new Integer(5);//converts int to Integer
+    System.out.println(i);
+    String s=Integer.toString(5);//converts Integer to String
+     System.out.println(s);
+    int f=Integer.parseInt(s);//converts String to int
+     System.out.println(f);
+    String str;
+    str = Integer.toString(4);//converts int to String
+     System.out.println(str);
+    int j;
+    j=Integer.valueOf(str);//converts String to integer
+     System.out.println(j);
+    int k=i.intValue();//converts Integer to int
+     System.out.println(k);
+    
+    
+}
+}
+class Two{
+void two()
+{
+    Float f=new Float(5.5f);//converts float to Float
+     System.out.println(f);
+    String a= Float.toString(f); //converts Float to String 
+     System.out.println(a);
+    float fl=Float.parseFloat(a);//converts String to float
+     System.out.println(fl);
+    String s=Float.toString(fl);// converts float to String 
+     System.out.println(s);
+    f=Float.valueOf(s);//  converts String to Float 
+     System.out.println(f);
+    float f2=f.floatValue();//converts Float to float   
+     System.out.println(f2);
+}
+}
+public class WrapperClass {
+    public static void main(String[] args) {
+        One o=new One();
+        o.one1();
+        Two t=new Two();
+        t.two();
+        
+    }
+    
+}
